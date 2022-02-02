@@ -26,3 +26,87 @@ const postIncrement = counter++
 // counter = counter + 1; 선할당 후가산
 console.log('postIncrement: ${postIncrement}, counter: ${counter}')
 // -- 의 경우도 감산으로 바뀔 뿐 동일한 방식
+
+// 4. Assignment operators
+let x = 3;
+let y = 6;
+x += y; // x = x + y;
+x -= y;
+x *= y;
+x /= y;
+
+// 5. Comparison operators
+console.log(10 < 6); // less than
+console.log(10 <= 6); // less than or equal
+console.log(10 > 6); // greater than
+console.log(10 >= 6); // greater than or equal
+
+// 6. Logical operators: || (or), && (and), ! (not)
+const value1 = false;
+const value2 = 4 < 2;
+
+// || (or), finds the first truthy value
+console.log('or: ${value1 || value2 || check()}');
+// 연산량이 있는 코드를 뒤로 배치하는 것이 효율적임
+
+// && (and), finds the first falsy value
+console.log('and: ${value1 && value2 && check()}');
+// often used to compress long if-statement
+// nullablueObject && nullablueObject.something
+
+// if (nullableObject != null) {
+//   nullableObject.something
+// }
+
+function check() {
+  for (let i = 0; i < 10; i++) {
+    // wasting time
+    console.log('anything');
+  }
+  return true;
+}
+
+// ! (not)
+console.log(!value1);
+
+// 7. Equality
+const stringFive = '5';
+const numberFive = 5;
+
+// == loose equality, whth type conversion
+console.log(stringFive == numberFive);
+console.log(stringFive != numberFive);
+// === strict equality, no type conversion
+console.log(stringFive === numberFive);
+console.log(stringFive !== numberFive);
+
+// object equality by reference
+const trace1 = { name: 'ToL' };
+const trace2 = { name: 'ToL' };
+const trace3 = trace1;
+console.log(trace1 == trace2);
+console.log(trace1 === trace2);
+console.log(trace1 === trace3);
+
+// equality - puzzler
+console.log(0 == false);
+console.log(0 === false);
+console.log('' == false);
+console.log('' === false);
+console.log(null == undefined);
+console.log(null === undefined); 
+
+// 8. Conditional operators: if
+// if, else if, else
+const name = 'ToL';
+if (name === 'ToL') {
+  console.log('Welcome, TraceOfLight!');
+} else if (name === 'coder') {
+  console.log('You are amazing coder');
+} else {
+  console.log('unknown');
+}
+
+// 9. Ternary operator: ?
+// condition ? value1 : value2;
+console.log(name === 'ToL' ? 'yes' : 'no');
