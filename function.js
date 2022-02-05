@@ -160,15 +160,16 @@ const simpleMultiply = (a, b) => {
 const calculate = function (command, a, b) {
   switch (command) {
     case 'add' :
-      console.log(a + b);
+        return a + b;
     case 'abstract' :
-      console.log(a - b);
+      return a - b;
     case 'divide' :
-      console.log(a / b);
+      return a / b;
     case 'multiply' :
-      console.log(a * b);
+      return a * b;
     case 'remainder' :
-      console.log(a % b);
-    default : console.log('wrong');
+      return a % b;
+    default : 
+      throw Error('unknown command');
   }
 }
