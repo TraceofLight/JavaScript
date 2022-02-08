@@ -59,3 +59,27 @@ fruits.splice(1, 1);
 console.log(fruits);
 fruits.splice(1, 1, '🍏', '🍉');
 console.log(fruits);
+
+// combine two arrays
+const fruits2 = ['🍐','🥥'];
+const newFruits = fruits.concat(fruits2);
+console.log(newFruits);
+
+// 5. Searching
+// indexOf : find the index
+console.clear();
+console.log(fruits);
+console.log(fruits.indexOf('🍎'));
+console.log(fruits.indexOf('🍉'));
+
+// includes
+console.log(fruits.includes('🍉'));
+console.log(fruits.includes('🥥'));
+console.log(fruits.indexOf('🥥'));
+
+// LastIndexOf
+console.clear();
+fruits.push('🍎');
+console.log(fruits);
+console.log(fruits.indexOf('🍎'));
+console.log(fruits.lastIndexOf('🍎'));
