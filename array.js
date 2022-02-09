@@ -83,3 +83,8 @@ fruits.push('🍎');
 console.log(fruits);
 console.log(fruits.indexOf('🍎'));
 console.log(fruits.lastIndexOf('🍎'));
+
+// Study
+console.clear();
+console.log(fruits.toString());
+console.log(fruits.toLocaleString());
