@@ -86,21 +86,25 @@ const students = [
 // Q9. compute students' average score
 {
   //const array1 = students.map(students => students.score)
-  const result = students.reduce((student) => {
-    const student1 = (student) => student.score
-    return student1;
-  }
-  );
-  console.log(result);
-}
+  const result = students.reduce((prev,curr) => prev + curr.score, 0);
+  console.log(result / students.length);
+}0
 
 // Q10. make a string containing all the scores
 // result should be: '45, 80, 90, 66, 88'
 {
-  
+  const result = students
+  .map((students) => students.score)
+  .join()
+  console.log(result);
 }
 
 // Bonus! do Q10 sorted in ascending order
 // result should be: '45, 66, 80, 88, 90'
 {
+  const result = students
+  .map((students) => students.score)
+  .sort((a,b) => (a - b))
+  .join();
+  console.log(result);
 }
