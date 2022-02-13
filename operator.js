@@ -1,4 +1,4 @@
-`Use Strict`
+`Use Strict`;
 
 // 1. String concatenation
 console.log(`my` + ` cat`);
@@ -20,11 +20,11 @@ let counter = 2;
 const preIncrement = ++counter;
 // counter = counter + 1;
 // preIncrement = counter; 선가산 후할당
-console.log(`preIncrement: ${preIncrement}, counter: ${counter}`)
-const postIncrement = counter++
-// preIncrement = counter; 
+console.log(`preIncrement: ${preIncrement}, counter: ${counter}`);
+const postIncrement = counter++;
+// preIncrement = counter;
 // counter = counter + 1; 선할당 후가산
-console.log(`postIncrement: ${postIncrement}, counter: ${counter}`)
+console.log(`postIncrement: ${postIncrement}, counter: ${counter}`);
 // -- 의 경우도 감산으로 바뀔 뿐 동일한 방식
 
 // 4. Assignment operators
@@ -94,7 +94,7 @@ console.log(0 === false);
 console.log(`` == false);
 console.log(`` === false);
 console.log(null == undefined);
-console.log(null === undefined); 
+console.log(null === undefined);
 
 // 8. Conditional operators: if
 // if, else if, else
@@ -155,7 +155,7 @@ for (let i = 3; i > 0; i = i - 2) {
   console.log(`inline variable for: ${i}`);
 }
 
-// nested loops 
+// nested loops
 for (let i = 0; i < 10; i++) {
   for (let j = 0; j < 10; j++) {
     console.log(`i: ${i}, j: ${j}`);
@@ -165,20 +165,19 @@ for (let i = 0; i < 10; i++) {
 // break, continue
 // Q1. iterate from 0 to 10 and print only even numbers (use continue)
 
-for (let i = 0; i < 11 ; i++) {
+for (let i = 0; i < 11; i++) {
   console.log(`i: ${i}`);
-  if (i % 2 !== 0 ) {
+  if (i % 2 !== 0) {
     continue;
   }
   console.log(`i= ${i}`);
-  }
+}
 
-// Q2. iterate from 0 to 10 and print numbers until reaching 8 (use break) 
+// Q2. iterate from 0 to 10 and print numbers until reaching 8 (use break)
 
-for (let i = 0; i < 10 ; i++) {
+for (let i = 0; i < 10; i++) {
   if (i > 8) {
     break;
   }
   console.log(`i= ${i}`);
-  }
-  
+}

@@ -1,4 +1,4 @@
-`Use Strict`
+`Use Strict`;
 
 // Function
 // - fundamental building block in the program
@@ -20,7 +20,7 @@ printHello();
 function log(message) {
   console.log(message);
 }
-log(`hello@`)
+log(`hello@`);
 log(20220203);
 
 // 2. Parameters
@@ -29,11 +29,11 @@ log(20220203);
 function changeName(obj) {
   obj.name = `coder`;
 }
-const ToL = {name: `ToL`};
+const ToL = { name: `ToL` };
 changeName(ToL);
 console.log(ToL);
 
-showMessage(`Hi!`, 'Mom'); // hoisted function declaration
+showMessage(`Hi!`, "Mom"); // hoisted function declaration
 // 3. Default parameters (added in ES6)
 function showMessage(message, from) {
   if (from === undefined) {
@@ -48,11 +48,11 @@ function printAll(...args) {
   for (let i = 0; i < args.length; i++) {
     console.log(args[i]);
   }
-//  for (const arg of args) {
-//    console.log(arg);
-//  }
+  //  for (const arg of args) {
+  //    console.log(arg);
+  //  }
 
-// args.forEach((arg) => console.log(arg));
+  // args.forEach((arg) => console.log(arg));
 }
 printAll(`dream`, `coding`, `TraceOfLight`);
 
@@ -104,7 +104,8 @@ function upgradeuser(user) {
 // a function declaration can be called earlier than it is defined. (hoisted)
 // a function expression is created when the execution reaches it.
 
-const print = function () { // anonymous function
+const print = function () {
+  // anonymous function
   console.log(`print`);
 };
 print();
@@ -117,15 +118,14 @@ console.log(sumAgain(1, 3));
 function randomQuiz(answer, printYes, printNo) {
   if (answer === `love you`) {
     printYes();
-  }
-  else {
+  } else {
     printNo();
   }
 }
 // anonymous function
 const printYes = function () {
   console.log(`yes!`);
-}
+};
 // named function
 // better debugging in debugger's stack traces
 // recursions
@@ -146,7 +146,7 @@ const add = (a, b) => a + b;
 const simpleMultiply = (a, b) => {
   // do something more
   return a * b;
-}
+};
 
 // IIFE: Immediately Invoked Function Expression
 (function hello() {
@@ -159,17 +159,17 @@ const simpleMultiply = (a, b) => {
 
 const calculate = function (command, a, b) {
   switch (command) {
-    case 'add' :
-        return a + b;
-    case 'abstract' :
+    case "add":
+      return a + b;
+    case "abstract":
       return a - b;
-    case 'divide' :
+    case "divide":
       return a / b;
-    case 'multiply' :
+    case "multiply":
       return a * b;
-    case 'remainder' :
+    case "remainder":
       return a % b;
-    default : 
-      throw Error('unknown command');
+    default:
+      throw Error("unknown command");
   }
-}
+};

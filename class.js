@@ -1,4 +1,4 @@
-`Use strict`
+`Use strict`;
 // Object-oriented programming
 // class: template
 // object: instance of a class
@@ -21,7 +21,7 @@ class Person {
   }
 }
 
-const TraceofLight = new Person('TraceofLight', 20);
+const TraceofLight = new Person("TraceofLight", 20);
 console.log(TraceofLight.age);
 console.log(TraceofLight.name);
 console.log(typeof TraceofLight.name);
@@ -37,7 +37,6 @@ class User {
 
   get age() {
     return this._age;
-
   }
 
   set age(value) {
@@ -48,7 +47,7 @@ class User {
   }
 }
 
-const user1 = new User('Steve', 'Job', -1);
+const user1 = new User("Steve", "Job", -1);
 console.log(user1.age);
 
 // 3. Fields (public, private)
@@ -65,7 +64,7 @@ console.log(experiment.privateField);
 // 4. Static properties and methods
 // Too soon!
 class Article {
-  static publisher = 'Dream Coding';
+  static publisher = "Dream Coding";
   constructor(articleNumber) {
     this.articleNumber = articleNumber;
   }
@@ -90,32 +89,32 @@ class Shape {
   }
 
   draw() {
-    console.log(`drawing ${this.color} color!`)
+    console.log(`drawing ${this.color} color!`);
   }
-  
+
   getArea() {
     return this.width * this.height;
   }
 }
 
-class Rectangle extends Shape {};
+class Rectangle extends Shape {}
 class Triangle extends Shape {
   draw() {
     super.draw();
-    console.log('🔺');
+    console.log("🔺");
   }
   getArea() {
     return (this.width * this.height) / 2;
   }
   toString() {
-    return `Triangel: color: ${this.color}`
+    return `Triangel: color: ${this.color}`;
   }
 }
 
-const rectangle = new Rectangle(20, 20, 'blue');
+const rectangle = new Rectangle(20, 20, "blue");
 rectangle.draw();
 console.log(rectangle.getArea());
-const triangle = new Triangle(20, 20, 'red');
+const triangle = new Triangle(20, 20, "red");
 console.log(triangle.getArea());
 triangle.draw();
 

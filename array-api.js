@@ -1,19 +1,19 @@
-'Use strict'
+"Use strict";
 
 // Q1. make a string out of an array
 {
-  const fruits = ['apple', 'banana', 'orange'];
+  const fruits = ["apple", "banana", "orange"];
   // console.log(fruits.toString())
-  const result = fruits.join('|');
+  const result = fruits.join("|");
   console.log(result);
 }
 
 // Q2. make an array out of a string
 {
-  const fruits = '🍎, 🥝, 🍌, 🍒';
+  const fruits = "🍎, 🥝, 🍌, 🍒";
   //array1 = new fruits;
   //console.log(array1);
-  const result = fruits.split(',', 2);
+  const result = fruits.split(",", 2);
   console.log(result);
 }
 
@@ -45,11 +45,11 @@ class Student {
   }
 }
 const students = [
-  new Student('A', 29, true, 45),
-  new Student('B', 28, false, 80),
-  new Student('C', 30, true, 90),
-  new Student('D', 40, false, 66),
-  new Student('E', 18, true, 88),
+  new Student("A", 29, true, 45),
+  new Student("B", 28, false, 80),
+  new Student("C", 30, true, 90),
+  new Student("D", 40, false, 66),
+  new Student("E", 18, true, 88),
 ];
 
 // Q5. find a student with the score 90
@@ -75,27 +75,26 @@ const students = [
 
 // Q8. check if there is a student with the score lower than 50
 {
-  console.clear()
-  const array1 = students.some(students => students.score < 50);
-  console.log(array1)
+  console.clear();
+  const array1 = students.some((students) => students.score < 50);
+  console.log(array1);
 
-  const result = students.every(students => students.score >= 50);
+  const result = students.every((students) => students.score >= 50);
   console.log(result);
 }
 
 // Q9. compute students' average score
 {
   //const array1 = students.map(students => students.score)
-  const result = students.reduce((prev,curr) => prev + curr.score, 0);
+  const result = students.reduce((prev, curr) => prev + curr.score, 0);
   console.log(result / students.length);
-}0
+}
+0;
 
 // Q10. make a string containing all the scores
 // result should be: '45, 80, 90, 66, 88'
 {
-  const result = students
-  .map((students) => students.score)
-  .join()
+  const result = students.map((students) => students.score).join();
   console.log(result);
 }
 
@@ -103,8 +102,8 @@ const students = [
 // result should be: '45, 66, 80, 88, 90'
 {
   const result = students
-  .map((students) => students.score)
-  .sort((a,b) => (a - b))
-  .join();
+    .map((students) => students.score)
+    .sort((a, b) => a - b)
+    .join();
   console.log(result);
 }

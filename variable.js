@@ -21,8 +21,9 @@ console.log(name);
 
 let apple = `banana`;
 console.log(apple);
-{console.log(apple)};
-
+{
+  console.log(apple);
+}
 
 let altname = `Hi`;
 {
@@ -32,9 +33,9 @@ let altname = `Hi`;
 }
 console.log(altname);
 
-// var (DO NOT USE THIS!) 
+// var (DO NOT USE THIS!)
 // var hoisting (move declaration from bottom to top)
-// has no block scope 
+// has no block scope
 
 // 3. Constant r(read only)
 // use const whenever possible
@@ -57,16 +58,16 @@ console.log(nice);
 
 // number - spacial numeric values: infinity, -infinity, NaN
 
-const infinity = 1/0;
-const negativeInfinity = -1/0;
-const nAn = `not a number`/2;
+const infinity = 1 / 0;
+const negativeInfinity = -1 / 0;
+const nAn = `not a number` / 2;
 
 console.log(infinity);
 console.log(negativeInfinity);
 console.log(nAn);
 
 // bigInt (fairly new, don`t use it yet)
-const bigInt = 3523452345238789756999999999994456532156234523452345243n;  // over (-2^53) ~ (2^53)
+const bigInt = 3523452345238789756999999999994456532156234523452345243n; // over (-2^53) ~ (2^53)
 console.log(`value: ${bigInt}, type: ${typeof bigInt}`);
 Number.MAX_SAFE_INTEGER;
 
@@ -97,14 +98,14 @@ console.log(`value: ${x}, type: typeof ${x}`);
 // symbol, create unique identifiers for objects
 const symbol1 = Symbol(`id`);
 const symbol2 = Symbol(`id`);
-console.log(symbol1===symbol2);
+console.log(symbol1 === symbol2);
 const gsymbol1 = Symbol.for(`id`);
 const gsymbol2 = Symbol.for(`id`);
-console.log(gsymbol1 ===gsymbol2); // true
+console.log(gsymbol1 === gsymbol2); // true
 console.log(`value: ${symbol1.description}, type: ${typeof symbol1}`);
 
 // ohject, real-life object, data structure
-const trace = {name: `trace`, age: 27};
+const trace = { name: `trace`, age: 27 };
 trace.age = 22;
 
 // 5. Dynamic typing: dynamically typed language

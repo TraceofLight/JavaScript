@@ -1,4 +1,4 @@
-`Use strict`
+`Use strict`;
 
 // Objects
 // one of the JavaScript's data types.
@@ -15,7 +15,7 @@ function print(person) {
   console.log(person.age);
 }
 
-const TraceofLight = {name : 'TraceofLight', age : 4};
+const TraceofLight = { name: "TraceofLight", age: 4 };
 print(TraceofLight);
 
 // with JavaScript magic (dynamically typed language)
@@ -30,22 +30,22 @@ console.log(TraceofLight.hasJob);
 // 2. Computed properties
 // key should be always string
 console.log(TraceofLight.name);
-console.log(TraceofLight['name']);
-TraceofLight['hasJob'] = true;
+console.log(TraceofLight["name"]);
+TraceofLight["hasJob"] = true;
 console.log(TraceofLight.hasJob);
 
 function printValue(obj, key) {
   console.log(obj[key]);
 }
-printValue(TraceofLight, 'name');
-printValue(TraceofLight, 'age');
+printValue(TraceofLight, "name");
+printValue(TraceofLight, "age");
 
 // 3. Property value shorthand
-const person1 = { name: 'bob', age: 2 };
-const person2 = { name: 'steve', age: 3 };
-const person3 = { name: 'dave', age: 4 };
+const person1 = { name: "bob", age: 2 };
+const person2 = { name: "steve", age: 3 };
+const person3 = { name: "dave", age: 4 };
 // class - object
-const person4 = new Person('TraceofLight', 5);
+const person4 = new Person("TraceofLight", 5);
 console.log(person4);
 
 // 4. Constructor Function
@@ -66,14 +66,14 @@ function Person(name, age) {
 // }
 
 // 5. in operator: property existence check (key in obj)
-console.log('name' in TraceofLight);
-console.log('age' in TraceofLight);
-console.log('random' in TraceofLight);
+console.log("name" in TraceofLight);
+console.log("age" in TraceofLight);
+console.log("random" in TraceofLight);
 console.log(TraceofLight.random);
 
 // 6. for..in vs for..of
 // for (key in obj)
-console.clear()
+console.clear();
 for (key in TraceofLight) {
   console.log(key);
 }
@@ -89,7 +89,7 @@ for (value of array) {
 
 // 7. Fun cloning
 // Object.assign(dest, [obj1, obj2, obj3...])
-const user = { name : 'TraceofLight', age : '20' };
+const user = { name: "TraceofLight", age: "20" };
 const user2 = user;
 // user2.name = 'coder';
 console.log(user2);
@@ -99,7 +99,7 @@ const user3 = {};
 for (key in user) {
   user3[key] = user[key];
 }
-console.clear()
+console.clear();
 console.log(user3);
 
 // const user4 = {};
@@ -107,8 +107,8 @@ console.log(user3);
 const user4 = Object.assign({}, user);
 console.log(user4);
 
-const fruit1 = { color: 'red' };
-const fruit2 = { color: 'blue', size: 'big' };
+const fruit1 = { color: "red" };
+const fruit2 = { color: "blue", size: "big" };
 const mixed = Object.assign({}, fruit1, fruit2);
 // overwrited by latest object key
 console.log(mixed.color);
